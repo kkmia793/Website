@@ -1,0 +1,251 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    background-color: #121212;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Header Section */
+header {
+    padding: 50px 0;
+    background: #000;
+    display: flex;
+    height:60px;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 3em;
+    color: #1d1d1d;
+}
+
+header p {
+    font-size: 1.5em;
+    color: #fff;
+}
+
+header nav {
+    margin-left: auto;
+}
+
+header ul {
+    display: flex;
+}
+
+header ul li {
+    margin-left: 20px;
+}
+
+/* FirstView Section */
+.first-view img {
+    width: 100%;
+    height: auto;
+}
+
+/* Brand Story Section */
+.brand-story {
+    padding: 100px 0;
+    background: #222;
+}
+
+.brand-story h2 {
+    font-size: 2.5em;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.brand-story p {
+    font-size: 1.2em;
+    color: #ccc;
+}
+
+/* Product Section */
+.product {
+    padding: 100px 0;
+    background: #121212;
+}
+
+.product h2 {
+    font-size: 2.5em;
+    color: #e6007e;
+    margin-bottom: 10px;
+}
+
+.product p {
+    font-size: 1.5em;
+    margin-bottom: 50px;
+    color: #ccc;
+}
+
+.product-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.product-item img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    margin-bottom: 20px;
+    transform: rotate(-5deg);
+}
+
+.product-content {
+    max-width: 600px;
+    text-align: left;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.product-content h3 {
+    font-size: 1.8em;
+    margin: 0 0 10px;
+    color: #00e6e6;
+}
+
+.product-content p {
+    margin: 5px 0;
+}
+
+/* PickUp Section */
+.pickup {
+    padding: 100px 0;
+    text-align: center;
+}
+
+.pickup h2 {
+    font-size: 2em;
+    color: #e6007e;
+    margin-bottom: 10px;
+}
+
+.pickup p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.pickup-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.pickup-item img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.pickup-content {
+    max-width: 600px;
+    text-align: left;
+}
+
+.pickup-content h3 {
+    font-size: 1.8em;
+    margin: 0 0 10px;
+    color: #00e6e6;
+}
+
+.pickup-content h3 span {
+    font-size: 0.8em;
+    color: #fff;
+}
+
+.pickup-content p:first-of-type {
+    font-size: 1.2em;
+    color: #e6007e;
+}
+
+.pickup-content p {
+    margin: 5px 0;
+}
+
+/* News Section */
+.news {
+    padding: 100px 0;
+    text-align: center;
+}
+
+.news h2 {
+    font-size: 2em;
+}
+
+.news-item {
+    display: inline-block;
+    width: 45%;
+    margin: 20px 2.5%;
+    text-align: center;
+}
+
+.news-item img {
+    width: 100%;
+    height: auto;
+}
+
+.news-item p {
+    font-size: 1em;
+}
+
+/* Contact Section */
+.contact {
+    padding: 100px 0;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.contact form {
+    display: inline-block;
+    text-align: left;
+    max-width: 600px;
+    width: 100%;
+}
+
+.contact form input, .contact form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 1em;
+}
+
+.contact form button {
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+/* Footer Section */
+.footer {
+    background: #000;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+.footer .social-links a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+}
