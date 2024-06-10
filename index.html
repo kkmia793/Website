@@ -5,145 +5,316 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Visionaize</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
 </head>
 <body>
-    <!-- Header Section -->
-    <header>
-    <h1>Visionaize</h1>
-    <nav>
-        <ul>
-            <li><a href=#product>Product</a></li>
-            <li><a href=#pickup>Pick Up</a></li>
-            <li><a href=#news>News</a></li>
-            <li><a href=#contact>Contact</a></li>
-        </ul>
-    </nav>
-    </header>
+    <div class="pc-content">
+        <script src="script.js"></script>
+        <!-- Header Section -->
+        <header id="main-header">
+            <h1>Visionaize</h1>
+            <nav>
+                <ul>
+                    <a href="#product">Product</a>
+                    <a href="#pickup">Pick Up</a>
+                    <a href="#news">News</a>
+                    <a href="#footer">Contact</a>
+                </ul>
+            </nav>
+        </header>
 
-    <!-- FirstView Section -->
-    <section class="first-view">
-        <div class="container">
-            <h1>VISIONAIZE</h1>
-            <img src="first-view.jpg" alt="First View">
-        </div>
-    </section>
+        <!-- FirstView Section -->
+        <section id="first-view" class="first-view">
+            <div class="first-view-container">
+                <h1>VISIONAIZE</h1>
+                <p class="overlay-text">未体験の視覚領域へ</p>
+            </div>
+        </section>
 
-    <!-- Brand Story Section -->
-    <section class="brand-story">
-        <div class="container">
-            <h2>BRAND STORY</h2>
-            <p>私たちは未来を見据え、革新的な製品を提供します。技術とデザインの融合を追求し、世界中のお客様に感動を届けることを目指しています。これからも挑戦を続け、新たな価値を創造してまいります。</p>
-        </div>
-    </section>
-
-    <!-- Product Section -->
-    <section class="product">
-        <div class="container">
-            <h2>Product</h2>
-            <p>製品の魅力</p>
-            <div class="product-item">
-                <img src="product1.jpg" alt="Product 1">
-                <div class="product-content">
-                    <h3>驚異的な解像度</h3>
-                    <p>100%から7%に圧縮された高解像度を保持。リアリティがアップし、物理的なストレスを減らす驚異的な解像度を提供。視覚改善体験を、全ての人の目に届けます。</p>
-                </div>
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator">
+            <div class="scroll-text">
+                <span>S</span>
+                <span>c</span>
+                <span>r</span>
+                <span>o</span>
+                <span>l</span>
+                <span>l</span>
             </div>
-            <div class="product-item">
-                <img src="product2.jpg" alt="Product 2">
-                <div class="product-content">
-                    <h3>視力改善の新次元</h3>
-                    <p>内視界を拡大するスマート技術により、あなたの視力をリアルタイムで補正。自然な視界感覚を維持したまま、本当に豊かな視力を提供します。</p>
-                </div>
-            </div>
-            <div class="product-item">
-                <img src="product3.jpg" alt="Product 3">
-                <div class="product-content">
-                    <h3>食事管理の最適化</h3>
-                    <p>日々の食事管理のストレスを軽減し、あなたの健康をサポートする食事バランスを提案。ヘルシーでスマートなライフスタイルを実現。未来の食事管理を、Visionarizeが届けます。</p>
-                </div>
-            </div>
-            <div class="product-item">
-                <img src="product4.jpg" alt="Product 4">
-                <div class="product-content">
-                    <h3>映画鑑賞の新境地</h3>
-                    <p>高品質なサウンド、視覚体験を提供。映画の世界に没入し、いつでもどこでも楽しめる、未来の映画体験を、サイグ提供してください。</p>
-                </div>
+            <div class="scroll-line">
+                <div class="scroll-dot"></div>
             </div>
         </div>
-    </section>
 
-    <!-- PickUp Section -->
-    <section class="pickup">
-        <div class="container">
-            <h2>Pick Up</h2>
-            <p>特集</p>
-            <div class="pickup-item">
-                <img src="pickup1.jpg" alt="PickUp 1">
-                <div class="pickup-content">
-                    <h3><span>01</span> COMMERSE</h3>
-                    <p>AR × 商業</p>
-                    <p>ショッピング体験が一新。特定商品の情報へようこそ。気になるアイテムを試さず、バーチャルで確認。広いショッピングモールでも迷わない。行きたいお店や商品のルートをARでガラスが案内します。ARサングラスは英語と連携。スマートで特集ショッピング体験をあなたに。</p>
+        <!-- BrandStory Section -->
+        <section class="brand-story">
+            <div class="bg-container">
+                <div class="rotated-bg"></div> 
+            </div>
+            <div class="brand-story-content">
+                <h2>BRAND<br>STORY</h2>
+                <p>未来の視覚体験をリードすることを使命とする、先進的なテクノロジーブランド。<br>
+                   現実と仮想の融合の実現が当たり前となってきた現代で、先進的なAR技術を活用した<br>
+                   ARグラスを誕生させ、驚異的な視覚体験をユーザーに提供するために誕生した。</p>
+            </div>
+        </section>
+
+        <!-- Product Section -->
+        <section id="product" class="product">
+            <div id="particles-js"></div>
+            <div class="product-container">
+                <h2>Product</h2>
+                <p class="product-description">製品の魅力</p>
+                <div class="product-item">
+                    <img src="img/product1.jpg" alt="Product 1">
+                    <div class="product-content-odd">
+                        <h3>驚異的な解像度</h3>
+                        <p>1080pから8Kに至る高解像度を採用。<br>
+                            リアルで鮮やかな映像が、あなたの現実を拡張する。<br>
+                            最高の視覚体験を、あなたの目の前に。</p>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <img src="img/product2.png" alt="Product 2">
+                    <div class="product-content-even">
+                        <h3>視力改善の新次元</h3>
+                        <p>内蔵されたスマート技術により、<br>
+                            あなたの視力をリアルタイムで補正。<br>
+                            度数調整が瞬時に行われ、常に最適な視界を提供する。</p>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <img src="img/product3.jpg" alt="Product 3">
+                    <div class="product-content-odd">
+                        <h3>映画鑑賞の新境地</h3>
+                        <p>高品質なサウンド、高解像度映像の一体感。<br>
+                            映画の世界に没入し、いつでもどこでも楽しめる。<br>
+                            未来の映画体験を、今すぐ体感してください。</p>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <img src="img/product4.jpg" alt="Product 4">
+                    <div class="product-content-even">
+                        <h3>食事管理の最適化</h3>
+                        <p>目の前の料理のカロリーを瞬時に表示。<br>
+                            あなたの目標に応じたカロリーと栄養バランスを提案。<br>
+                            ヘルシーでスタイリッシュな毎日を。<br>
+                            未来の食事管理は、Visionaizeにお任せ。</p>
+                    </div>
                 </div>
             </div>
-            <div class="pickup-item">
-                <img src="pickup2.jpg" alt="PickUp 2">
-                <div class="pickup-content">
-                    <h3><span>02</span> GAME</h3>
-                    <p>AR × 娯楽</p>
-                    <p>リアルタイムゲームイベントが開催。仮想キャラクターやアイテムが街に現れ、参加者同士で戦い合う。周囲のリアルな風景がゲームの舞台となり、あなたをゲームの世界に没入させる。未知の世界が待ち受ける、未来のゲーム体験をお楽しみください。</p>
+        </section>
+
+        <!-- PickUp Section -->
+        <section id="pickup" class="pickup">
+            <div id="particles-js"></div>
+            <div class="pickup-container">
+                <h2>Pick Up</h2>
+                <p>特集</p>
+                <div class="pickup-item">
+                    <img src="img/pickup1.jpg" alt="PickUp 1" class="styled-image">
+                    <div class="pickup-content-odd">
+                        <h3><span>01</span><br> COMMERSE</h3>
+                        <p>AR × 商業</p>
+                        <p>ショッピング体験が一新。<br>特定満載の新時代へようこそ。<br>気になるアイテムを試着せず、バーチャルで確認。<br>広いショッピングモールでも迷わない。<br>行きたいお店や商品へのルートをARサングラスが案内します。<br>ARサングラスは商業と連携。<br>スマートでお得なショッピング体験をあなたに。</p>
+                    </div>
+                </div>
+                <div class="pickup-item">
+                    <img src="img/pickup2.jpg" alt="PickUp 2" class="styled-image mirrored-image">
+                    <div class="pickup-content-even">
+                        <h3><span>02</span><br> GAME</h3>
+                        <p>AR × 娯楽</p>
+                        <p>リアルタイムゲームイベントが開催。<br>仮想キャラクターやアイテムが街に現れ、参加者同士で競い合う。<br>周囲のリアルな風景がゲームの舞台となり、<br>あなたをゲームの世界に没入させる。<br>未知の世界が広がる、未来のゲーム体験をお楽しみください。</p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+        
 
-    <!-- News Section -->
-    <section class="news">
-        <div class="container">
-            <h2>NEWS</h2>
-            <div class="news-items">
-                <div class="news-item">
-                    <img src="news1.jpg" alt="News 1">
-                    <p>最新のニュース記事1</p>
+        <div id="news-section">
+            <h2>News</h2>
+            <p>新着情報</p>
+            <div id="particles-js"></div>
+            <div id="carousel-container">
+                <div id="carousel">
+                    <figure id="spinner">
+                        <img src="img/news1.jpg" alt>
+                        <img src="img/news2.jpg" alt>
+                        <img src="img/news3.jpg" alt>
+                        <img src="img/news4.jpg" alt>
+                        <img src="img/news5.jpg" alt>
+                        <img src="img/news6.jpg" alt>
+                        <img src="img/news7.jpg" alt>
+                        <img src="img/news8.jpg" alt>
+                        <img src="img/news9.jpg" alt>
+                        <img src="img/news10.jpg" alt>
+                        <img src="img/news11.jpg" alt>
+                        <img src="img/news12.jpg" alt>
+                    </figure>
                 </div>
-                <div class="news-item">
-                    <img src="news2.jpg" alt="News 2">
-                    <p>最新のニュース記事2</p>
-                </div>
-                <div class="news-item">
-                    <img src="news3.jpg" alt="News 3">
-                    <p>最新のニュース記事3</p>
-                </div>
+                <span class="ss-icon left" onclick="galleryspin('-')">&lt;</span>
+                <span class="ss-icon right" onclick="galleryspin('')">&gt;</span>
             </div>
         </div>
-    </section>
 
-    <!-- Contact Section -->
-    <section class="contact">
-        <div class="container">
-            <h2>Contact</h2>
-            <p>お問い合わせ</p>
-            <form>
-                <label for="name">お名前:</label>
-                <input type="text" id="name" name="name" required>
-                <label for="email">メールアドレス:</label>
-                <input type="email" id="email" name="email" required>
-                <label for="message">メッセージ:</label>
-                <textarea id="message" name="message" required></textarea>
-                <button type="submit">送信</button>
-            </form>
-        </div>
-    </section>
-
-    <!-- Footer Section -->
-    <footer>
-        <div class="container">
-            <p>Follow Us</p>
-            <div class="social-links">
-                <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
-                <a href="#"><img src="twitter-icon.png" alt="Twitter"></a>
-                <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
+        <!-- Footer Section -->
+        <footer id="footer" class="footer">
+            <div class="footer-container">
+                <div class="followus">
+                    <p>Follow Us</p>
+                </div>
+                <div class="social-links">
+                    <a href="#"><img src="img/facebook-icon.png" alt="Facebook"></a>
+                    <a href="#"><img src="img/twitter-icon.png" alt="Twitter"></a>
+                    <a href="#"><img src="img/instagram-icon.png" alt="Instagram"></a>
+                </div>
             </div>
-        </div>
-    </footer>
+            <div class="copyright">
+                <p>© 2050 VISIONAIZE</p>
+            </div>
+        </footer>
+    </div>
+    <div class="sp-content">
+        <header id="js-header" class="l-header _is-top js-contentsAfterOP _show">
+            <div class="l-header__inner">
+                <a id="js-headerLogo" class="headerLogo" href="/">Visionaize</a>
+                <button id="js-mainMenuOpener" class="menuOpener is-SP _is-active" type="button" onclick="toggleMenu()">
+                    <span class="menuOpener__line"></span>
+                    <span class="menuOpener__line"></span>
+                </button>
+            </div>
+            <div id="js-mainMenu" class="mainMenu _is-show hidden">
+                <div class="mainMenu__frame">
+                    <div class="mainMenu__inner">
+                        <nav id="js-globalNav" class="c-globalNav">
+                            <ul class="c-globalNav__list">
+                                <li class="c-globalNav__listItem"><a href="#product">Product</a></li>
+                                <li class="c-globalNav__listItem"><a href="#pickup">Pick Up</a></li>
+                                <li class="c-globalNav__listItem"><a href="#news">News</a></li>
+                                <li class="c-globalNav__listItem"><a href="#footer">Contact</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </header>
+    
+        <section id="first-view" class="first-view">
+            <div class="first-view-container">
+                <h1>VISIONAIZE</h1>
+                <p class="overlay-text">未体験の視覚領域へ</p>
+            </div>
+        </section>
+    
+        <section class="brand-story">
+            <div class="bg-container">
+                <div class="rotated-bg"></div>
+            </div>
+            <div class="brand-story-content">
+                <h2>BRAND<br>STORY</h2>
+                <p>未来の視覚体験をリードすることを使命とする、先進的なテクノロジーブランド。<br>
+                現実と仮想の融合の実現が当たり前となってきた現代で、先進的なAR技術を活用した<br>
+                ARグラスを誕生させ、驚異的な視覚体験をユーザーに提供するために誕生した。</p>
+            </div>
+        </section>
+    
+        <section id="product" class="product">
+            <div class="cyber-animation"></div>
+            <div class="product-container">
+                <h2>Product</h2>
+                <p>製品の魅力</p>
+                <div class="slider">
+                    <div class="slide">
+                        <img src="img/product1.jpg" alt="Product 1">
+                        <div class="product-content">
+                            <h3>驚異的な解像度</h3>
+                            <p>1080pから8Kに至る高解像度を採用。<br>
+                                リアルで鮮やかな映像が、あなたの現実を拡張する。<br>
+                                最高の視覚体験を、あなたの目の前に。</p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="img/product2.png" alt="Product 2">
+                        <div class="product-content">
+                            <h3>視力改善の新次元</h3>
+                            <p>内蔵されたスマート技術により、<br>
+                                あなたの視力をリアルタイムで補正。<br>
+                                度数調整が瞬時に行われ、常に最適な視界を提供する。</p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="img/product3.jpg" alt="Product 3">
+                        <div class="product-content">
+                            <h3>映画鑑賞の新境地</h3>
+                            <p>高品質なサウンド、高解像度映像の一体感。<br>
+                                映画の世界に没入し、いつでもどこでも楽しめる。<br>
+                                未来の映画体験を、今すぐ体感してください。</p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="img/product4.jpg" alt="Product 4">
+                        <div class="product-content">
+                            <h3>食事管理の最適化</h3>
+                            <p>目の前の料理のカロリーを瞬時に表示。<br>
+                                あなたの目標に応じたカロリーと栄養バランスを提案。<br>
+                                ヘルシーでスタイリッシュな毎日を。<br>
+                                未来の食事管理は、Visionaizeにお任せ。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-buttons">
+                    <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+                    <button class="next" onclick="moveSlide(1)">&#10095;</button>
+                </div>
+            </div>
+        </section>
+    
+        <section id="news" class="news">
+            <h2>News</h2>
+            <p>新着情報</p>
+            <div class="slider">
+                <div class="slide"><img src="img/news1.jpg" alt="News 1"></div>
+                <div class="slide"><img src="img/news2.jpg" alt="News 2"></div>
+                <div class="slide"><img src="img/news3.jpg" alt="News 3"></div>
+                <div class="slide"><img src="img/news4.jpg" alt="News 4"></div>
+                <div class="slide"><img src="img/news5.jpg" alt="News 5"></div>
+                <div class="slide"><img src="img/news6.jpg" alt="News 6"></div>
+                <div class="slide"><img src="img/news7.jpg" alt="News 7"></div>
+                <div class="slide"><img src="img/news8.jpg" alt="News 8"></div>
+                <div class="slide"><img src="img/news9.jpg" alt="News 9"></div>
+                <div class="slide"><img src="img/news10.jpg" alt="News 10"></div>
+                <div class="slide"><img src="img/news11.jpg" alt="News 11"></div>
+                <div class="slide"><img src="img/news12.jpg" alt="News 12"></div>
+            </div>
+            <div class="slider-buttons">
+                <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+                <button class="next" onclick="moveSlide(1)">&#10095;</button>
+            </div>
+        </section>
+    
+        <footer id="footer" class="footer">
+            <div class="footer-container">
+                <div class="followus">
+                    <p>Follow Us</p>
+                </div>
+                <div class="social-links">
+                    <a href="#"><img src="img/facebook-icon.png" alt="Facebook"></a>
+                    <a href="#"><img src="img/twitter-icon.png" alt="Twitter"></a>
+                    <a href="#"><img src="img/instagram-icon.png" alt="Instagram"></a>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>© 2050 VISIONAIZE</p>
+            </div>
+        </footer>
+    </div>
+        <!-- パーティクルの初期化 -->
+    <script>
+        particlesJS.load('particles-js', 'particles.json', function() {
+            console.log('particles.json loaded...');
+        });
+    </script>    
 </body>
 </html>
