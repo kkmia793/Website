@@ -279,7 +279,15 @@ header nav ul {
     width: 80%; 
 }
 
-
+/* パーティクル用のCSS */
+#particles-js-1, #particles-js-2, #particles-js-3, #particles-js-4, #particles-js-5 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1; /* 背景として表示 */
+}
 
 /* Product Section */
 .product {
@@ -289,14 +297,8 @@ header nav ul {
     overflow: hidden;
 }
 
-#particles-js {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1; /* 背景として表示 */
-}
+
+
 
 .product-container {
     width: 80%;
