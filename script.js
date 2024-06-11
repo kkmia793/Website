@@ -114,7 +114,18 @@ document.addEventListener("DOMContentLoaded", function() {
     startAutoPlay();
 });
 
+document.querySelector('.hamburger').addEventListener('click', function() {
+    this.classList.toggle('active');
+    document.querySelector('.slide-menu').classList.toggle('active');
+});
 
+// メニュー項目をクリックしたときにメニューを閉じる
+document.querySelectorAll('.slide-menu a').forEach(function(item) {
+    item.addEventListener('click', function() {
+        document.querySelector('.hamburger').classList.remove('active');
+        document.querySelector('.slide-menu').classList.remove('active');
+    });
+});
 
 
 particlesJS('particles-js', {
