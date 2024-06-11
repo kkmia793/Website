@@ -49,42 +49,73 @@ document.addEventListener("DOMContentLoaded", function() {
     handleResize();
 });
 
-var angle = 0;
-function galleryspin(sign) {
-    var spinner = document.querySelector("#spinner");
-    if (sign === '-') { angle += 60; } else { angle -= 60; }
-    spinner.setAttribute("style", "transform: rotateY(" + angle + "deg);");
-}
 
-// JavaScript to toggle the mobile menu
-function toggleMenu() {
-    const menu = document.getElementById('mobile-menu');
-    if (menu.classList.contains('hidden')) {
-        menu.classList.remove('hidden');
-    } else {
-        menu.classList.add('hidden');
+document.addEventListener("DOMContentLoaded", function() {
+    const slide = document.getElementById('slide');
+    const prev = document.getElementById('prev');
+    const next = document.getElementById('next');
+    const indicator = document.getElementById('indicator');
+    const lists = document.querySelectorAll('.list');
+    const totalSlides = lists.length;
+    let count = 0;
+    let autoPlayInterval;
+
+    function updateListBackground() {
+        for (let i = 0; i < lists.length; i++) {
+            lists[i].style.backgroundColor = i === count % totalSlides ? '#60D4DD' : '#fff';
+        }
     }
-}
 
-let slideIndex = 0;
-showSlides(slideIndex);
-
-function moveSlide(n) {
-    showSlides(slideIndex += n);
-}
-
-function showSlides(n) {
-    let slides = document.getElementsByClassName("slide");
-    if (n >= slides.length) { slideIndex = 0 }
-    if (n < 0) { slideIndex = slides.length - 1 }
-    for (let i = 0; i < slides.length; i++) {
-        slides[i].classList.remove("active");
+    function nextClick() {
+        slide.classList.remove(`slide${count % totalSlides + 1}`);
+        count++;
+        slide.classList.add(`slide${count % totalSlides + 1}`);
+        updateListBackground();
     }
-    slides[slideIndex].classList.add("active");
-}
 
-// 初期表示のスライド
-showSlides(slideIndex);
+    function prevClick() {
+        slide.classList.remove(`slide${count % totalSlides + 1}`);
+        count--;
+        if (count < 0) count = totalSlides - 1;
+        slide.classList.add(`slide${count % totalSlides + 1}`);
+        updateListBackground();
+    }
+
+    function startAutoPlay() {
+        autoPlayInterval = setInterval(nextClick, 3000);
+    }
+
+    function resetAutoPlayInterval() {
+        clearInterval(autoPlayInterval);
+        startAutoPlay();
+    }
+
+    next.addEventListener('click', () => {
+        nextClick();
+        resetAutoPlayInterval();
+    });
+
+    prev.addEventListener('click', () => {
+        prevClick();
+        resetAutoPlayInterval();
+    });
+
+    indicator.addEventListener('click', (event) => {
+        if (event.target.classList.contains('list')) {
+            const index = Array.from(lists).indexOf(event.target);
+            slide.classList.remove(`slide${count % totalSlides + 1}`);
+            count = index;
+            slide.classList.add(`slide${count % totalSlides + 1}`);
+            updateListBackground();
+            resetAutoPlayInterval();
+        }
+    });
+
+    startAutoPlay();
+});
+
+
+
 
 particlesJS('particles-js', {
         "particles": {

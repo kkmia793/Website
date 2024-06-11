@@ -112,7 +112,7 @@
             <div id="particles-js"></div>
             <div class="pickup-container">
                 <h2>Pick Up</h2>
-                <p>特集</p>
+                <p class="pickup-description">特集</p>
                 <div class="pickup-item">
                     <img src="img/pickup1.jpg" alt="PickUp 1" class="styled-image">
                     <div class="pickup-content-odd">
@@ -131,33 +131,48 @@
                 </div>
             </div>
         </section>
-        
 
-        <div id="news-section">
-            <h2>News</h2>
-            <p>新着情報</p>
-            <div id="particles-js"></div>
-            <div id="carousel-container">
-                <div id="carousel">
-                    <figure id="spinner">
-                        <img src="img/news1.jpg" alt>
-                        <img src="img/news2.jpg" alt>
-                        <img src="img/news3.jpg" alt>
-                        <img src="img/news4.jpg" alt>
-                        <img src="img/news5.jpg" alt>
-                        <img src="img/news6.jpg" alt>
-                        <img src="img/news7.jpg" alt>
-                        <img src="img/news8.jpg" alt>
-                        <img src="img/news9.jpg" alt>
-                        <img src="img/news10.jpg" alt>
-                        <img src="img/news11.jpg" alt>
-                        <img src="img/news12.jpg" alt>
-                    </figure>
+
+        <section id="news" class="news">
+            <h2 class="title">News</h2>
+            <p class="news-description">新着情報</p>
+
+            <!-- スライドの外枠 -->
+            <div class="slide-wrapper">
+            <!-- スライド（コンテンツ） -->
+                <div id="slide" class="slide">
+                <div>
+                    <img src ="img/news1.jpg" alt ="News1">
+                    <p>医療業界に革命をもたらす新しい手術室が誕生。<br>先進的なロボットアシスタントやARシステムが導入されており、<br>外科医の技術を飛躍的に向上させることが可能となった。</p>
+                    <p>2050. 4.15</p>
                 </div>
-                <span class="ss-icon left" onclick="galleryspin('-')">&lt;</span>
-                <span class="ss-icon right" onclick="galleryspin('')">&gt;</span>
+                <div>
+                    <img src ="img/news2.jpg" alt ="News2">
+                    <p>未来を先取りした視覚体験がここに！！<br>Visionaize主催のARサングラス展示会をお見逃しなく。<br>
+                        最新テクノロジーとデザインの魅力に触れられます。</p>
+                    <p>2050. 6.15</p>
+                </div>
+                <div>
+                    <img src ="img/news3.jpg" alt ="News3">
+                    <p>この未来都市では、音楽の楽しみ方も大きく進化しています。<br>最新のデジタルミュージックデバイスはAR技術と融合し、<br>ユーザーに一体感と没入感を提供している！！
+                    </p>
+                    <p>2050. 8.15</p>
+                </div>
+                </div>
+
+            <span id="prev" class="prev"></span>
+            <span id="next" class="next"></span>
+
+            <ul class="indicator" id="indicator">
+            <li class="list"></li>
+            <li class="list"></li>
+            <li class="list"></li>
+            </ul>
             </div>
-        </div>
+
+        </section>
+        
+        
 
         <!-- Footer Section -->
         <footer id="footer" class="footer">
@@ -176,141 +191,9 @@
             </div>
         </footer>
     </div>
-    <div class="sp-content">
-        <header id="js-header" class="l-header _is-top js-contentsAfterOP _show">
-            <div class="l-header__inner">
-                <a id="js-headerLogo" class="headerLogo" href="/">Visionaize</a>
-                <button id="js-mainMenuOpener" class="menuOpener is-SP _is-active" type="button" onclick="toggleMenu()">
-                    <span class="menuOpener__line"></span>
-                    <span class="menuOpener__line"></span>
-                </button>
-            </div>
-            <div id="js-mainMenu" class="mainMenu _is-show hidden">
-                <div class="mainMenu__frame">
-                    <div class="mainMenu__inner">
-                        <nav id="js-globalNav" class="c-globalNav">
-                            <ul class="c-globalNav__list">
-                                <li class="c-globalNav__listItem"><a href="#product">Product</a></li>
-                                <li class="c-globalNav__listItem"><a href="#pickup">Pick Up</a></li>
-                                <li class="c-globalNav__listItem"><a href="#news">News</a></li>
-                                <li class="c-globalNav__listItem"><a href="#footer">Contact</a></li>
-                            </ul>
-                        </nav>
-                    </div>
-                </div>
-            </div>
-        </header>
+
     
-        <section id="first-view" class="first-view">
-            <div class="first-view-container">
-                <h1>VISIONAIZE</h1>
-                <p class="overlay-text">未体験の視覚領域へ</p>
-            </div>
-        </section>
-    
-        <section class="brand-story">
-            <div class="bg-container">
-                <div class="rotated-bg"></div>
-            </div>
-            <div class="brand-story-content">
-                <h2>BRAND<br>STORY</h2>
-                <p>未来の視覚体験をリードすることを使命とする、先進的なテクノロジーブランド。<br>
-                現実と仮想の融合の実現が当たり前となってきた現代で、先進的なAR技術を活用した<br>
-                ARグラスを誕生させ、驚異的な視覚体験をユーザーに提供するために誕生した。</p>
-            </div>
-        </section>
-    
-        <section id="product" class="product">
-            <div class="cyber-animation"></div>
-            <div class="product-container">
-                <h2>Product</h2>
-                <p>製品の魅力</p>
-                <div class="slider">
-                    <div class="slide">
-                        <img src="img/product1.jpg" alt="Product 1">
-                        <div class="product-content">
-                            <h3>驚異的な解像度</h3>
-                            <p>1080pから8Kに至る高解像度を採用。<br>
-                                リアルで鮮やかな映像が、あなたの現実を拡張する。<br>
-                                最高の視覚体験を、あなたの目の前に。</p>
-                        </div>
-                    </div>
-                    <div class="slide">
-                        <img src="img/product2.png" alt="Product 2">
-                        <div class="product-content">
-                            <h3>視力改善の新次元</h3>
-                            <p>内蔵されたスマート技術により、<br>
-                                あなたの視力をリアルタイムで補正。<br>
-                                度数調整が瞬時に行われ、常に最適な視界を提供する。</p>
-                        </div>
-                    </div>
-                    <div class="slide">
-                        <img src="img/product3.jpg" alt="Product 3">
-                        <div class="product-content">
-                            <h3>映画鑑賞の新境地</h3>
-                            <p>高品質なサウンド、高解像度映像の一体感。<br>
-                                映画の世界に没入し、いつでもどこでも楽しめる。<br>
-                                未来の映画体験を、今すぐ体感してください。</p>
-                        </div>
-                    </div>
-                    <div class="slide">
-                        <img src="img/product4.jpg" alt="Product 4">
-                        <div class="product-content">
-                            <h3>食事管理の最適化</h3>
-                            <p>目の前の料理のカロリーを瞬時に表示。<br>
-                                あなたの目標に応じたカロリーと栄養バランスを提案。<br>
-                                ヘルシーでスタイリッシュな毎日を。<br>
-                                未来の食事管理は、Visionaizeにお任せ。</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="slider-buttons">
-                    <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
-                    <button class="next" onclick="moveSlide(1)">&#10095;</button>
-                </div>
-            </div>
-        </section>
-    
-        <section id="news" class="news">
-            <h2>News</h2>
-            <p>新着情報</p>
-            <div class="slider">
-                <div class="slide"><img src="img/news1.jpg" alt="News 1"></div>
-                <div class="slide"><img src="img/news2.jpg" alt="News 2"></div>
-                <div class="slide"><img src="img/news3.jpg" alt="News 3"></div>
-                <div class="slide"><img src="img/news4.jpg" alt="News 4"></div>
-                <div class="slide"><img src="img/news5.jpg" alt="News 5"></div>
-                <div class="slide"><img src="img/news6.jpg" alt="News 6"></div>
-                <div class="slide"><img src="img/news7.jpg" alt="News 7"></div>
-                <div class="slide"><img src="img/news8.jpg" alt="News 8"></div>
-                <div class="slide"><img src="img/news9.jpg" alt="News 9"></div>
-                <div class="slide"><img src="img/news10.jpg" alt="News 10"></div>
-                <div class="slide"><img src="img/news11.jpg" alt="News 11"></div>
-                <div class="slide"><img src="img/news12.jpg" alt="News 12"></div>
-            </div>
-            <div class="slider-buttons">
-                <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
-                <button class="next" onclick="moveSlide(1)">&#10095;</button>
-            </div>
-        </section>
-    
-        <footer id="footer" class="footer">
-            <div class="footer-container">
-                <div class="followus">
-                    <p>Follow Us</p>
-                </div>
-                <div class="social-links">
-                    <a href="#"><img src="img/facebook-icon.png" alt="Facebook"></a>
-                    <a href="#"><img src="img/twitter-icon.png" alt="Twitter"></a>
-                    <a href="#"><img src="img/instagram-icon.png" alt="Instagram"></a>
-                </div>
-            </div>
-            <div class="copyright">
-                <p>© 2050 VISIONAIZE</p>
-            </div>
-        </footer>
-    </div>
-        <!-- パーティクルの初期化 -->
+ <!-- パーティクルの初期化 -->
     <script>
         particlesJS.load('particles-js', 'particles.json', function() {
             console.log('particles.json loaded...');
