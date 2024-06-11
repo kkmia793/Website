@@ -5,6 +5,11 @@
 }
 
 @font-face {
+    font-family: 'KIYOSUNASANS-L';
+    src: url('fonts/KIYOSUNASANS-L-1.0.1.OTF') format('opentype');
+}
+
+@font-face {
     font-family: 'Terano';
     src: url('fonts/TERANO BOLD.TTF') format('truetype');
 }
@@ -788,9 +793,8 @@ section {
         background-color: #1d1d1d;
       }
       .header-area h1{
-        font-size: 24px;
+        font-size: 20px;
         color: #fff;
-        padding-left: 5%;
         font-family: 'Terano', sans-serif;
       }
 
@@ -808,6 +812,7 @@ section {
         width: 40px;
         height: 25px;
         position: relative;
+        margin-right: 40px;
       }
       .hamburger span{
         position: absolute;
@@ -868,5 +873,108 @@ section {
       .slide-menu.active{
         transform: translateX(0);
       }
+
+/* FirstView Section */
+.first-view {
+    background: url('img/sp-FirstView.jpg') no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; 
+}
+
+/* FirstView Container */
+.first-view-container {
+    position: absolute;
+    bottom: 40px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%; /* 追加: 幅を100%に設定 */
+    height: auto;
+}
+
+/* FirstView Heading */
+.first-view h1 {
+    font-family: 'Terano';
+    font-size: 44px;
+    color: #fff;
+    text-shadow: none;
+    text-align: center; 
+    z-index: 2;
+    margin-bottom: 280px;
+    width: 100%; /* 追加: 幅を100%に設定 */
+}
+
+/* Overlay Text */
+.overlay-text {
+    font-family: 'KIYOSUNASANS-L', sans-serif;
+    font-size: 40px;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-align: center; 
+    width: 100%; /* 追加: 幅を100%に設定 */
+    margin-bottom: 200px;
+}
+
+/* Scroll Indicator */
+.scroll-indicator {
+    position: absolute;
+    top:850px;
+    display: flex;
+    align-items: center;
+    color: #fff;
+}
+
+.scroll-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1em;
+    font-family: 'Terano', sans-serif;
+    margin-right: 10px;
+    color: #fff;
+}
+
+.scroll-text span {
+    display: block;
+    margin: 2px 0;
+}
+
+.scroll-line {
+    position: relative;
+    width: 2px;
+    height: 200px;
+    background-color: #fff;
+}
+
+.scroll-dot {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 15px;
+    height: 15px;
+    background-color: #fff;
+    border-radius: 50%;
+    animation: scrollDotMove 2s infinite;
+}
+
+@keyframes scrollDotMove {
+    0%, 100% {
+        top: 0;
+    }
+    50% {
+        top: calc(100% - 15px);
+    }
+}
+
+
+
 
 }
