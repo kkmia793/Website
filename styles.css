@@ -1022,10 +1022,8 @@ section {
 }
 
 
-
-
 .sp-product-container {
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
     position: relative;
     z-index: 2; 
@@ -1039,6 +1037,7 @@ section {
     color: #e6007e;
     font-family: 'Abel', sans-serif;
     text-align: left;
+    padding-left: 20px;
 }
 
 .sp-product-description {
@@ -1048,90 +1047,269 @@ section {
     left: 3px;
     margin-top : -30px;
     padding-bottom: 30px;
+    padding-left: 20px;
 }
 
-.sp-product-item p {
-    font-size: 16px;
-    color: #ffffff;
-    text-align: center;
-}
 
 .sp-product-item {
-    display: block;
-    align-items: flex-start;
-    margin-bottom: 150px;
-    position: relative;
+    padding-bottom: 200px;
 }
 
 .sp-product-item img {
-    width: 481px;
-    height: 280px;
-    object-fit: cover;
-    margin-right: 50px;
-    transition: transform 0.3s ease;
-}
-
-.sp-product-item:nth-child(odd) {
-    flex-direction: row;
-}
-
-.sp-product-item:nth-child(odd) img {
+    width: 500px;
+    height: 278px;
     clip-path: polygon(0 0, 75% 0, 100% 100%, 25% 100%);
-    margin-right: 20px;
-    margin-left: 0;
 }
 
-
-.sp-product-item:nth-child(even) {
-    flex-direction: row-reverse;
-}
-
-.sp-product-item:nth-child(even) img {
-    clip-path: polygon(25% 0, 100% 0, 75% 100%, 0 100%);
-    margin-right: 0;
-    margin-left: 20px;
-
-}
-
-
-
-.sp-product-content-odd {
-    position: absolute;
-    top: 50%;
-    width: 40%;
-    left: 60%;
-    transform: translateY(-50%);
-    padding: 20px;
-    color: #ffffff;
-}
-
-.sp-product-content-even {
-    position: absolute;
-    top: 50%;
-    width: 40%;
-    right:60%;
-    transform: translateY(-50%);
-    padding: 20px;
-    color: #ffffff;
+.sp-product-content-odd, .sp-product-content-even {
+    font-family: 'KIYOSUNASANS', sans-serif;
+    font-size: 16px;
+    color: #fff;
+    text-align: left;
+    margin-top: 40px;
+    margin-left: 40px;
 }
 
 .sp-product-content-odd h3, .sp-product-content-even h3 {
+    font-family: 'KIYOSUNASANS', sans-serif;
+    font-size: 18px;
+    color: #60D4DD;
+    text-align: left;
+}
+
+/* スライドの外枠 */
+.sp-slide-wrapper {
+    width: 100%;
+    height: 600px;
+    position: relative;
+    padding-bottom: 100px;
+}
+
+/* スライド（コンテンツ） */
+.sp-slide {
+    width: 500%; /* 4つのスライドなので、幅を4倍に設定 */
+    height: 100%;
+    display: flex;
+    transition: all 0.3s;
+}
+
+.sp-slide div {
+    width: 100%; /* 4つのスライドなので、幅を1/4に設定 */
+    height: 100%;
     font-size: 16px;
-    color: #00e6e6;
-    font-family: 'Abel', sans-serif;
-    margin-bottom: 20px;
+}
+
+.sp-slide img {
+    width: 400px;
+    height: 278px;
+    clip-path: polygon(0 0, 75% 0, 100% 100%, 25% 100%);
+}
+
+.sp-slide p {
+    font-family: 'KIYOSUNASANS', sans-serif;
+    font-size: 17px;
+    color: #fff;
+    text-align: left;
+}
+
+.sp-slide1 {
+    transform: translateX(0);
+}
+
+.sp-slide2 {
+    transform: translateX(-100%);
+}
+
+.sp-slide3 {
+    transform: translateX(-200%);
+}
+
+.sp-slide4 {
+    transform: translateX(-300%);
+}
+
+/* 左右のボタン */
+.sp-next {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    right: 40px;
+    bottom: 20%;
+    z-index: 10;
+    cursor: pointer;
+    border-top: solid 3px #fff;
+    border-right: solid 3px #fff;
+    transform: rotate(45deg) translateY(50%);
+}
+
+.sp-prev {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    left: 60px;
+    bottom: 20%;
+    z-index: 10;
+    cursor: pointer;
+    border-top: solid 3px #fff;
+    border-right: solid 3px #fff;
+    transform: rotate(-135deg) translateY(-50%);
+}
+
+/* インジケーター */
+.sp-indicator {
+    width: 100%;
+    position: absolute;
+    bottom: 120px;
+    left: 45%;
+    transform: translateX(-50%);
+    display: flex;
+    column-gap: 18px;
+    z-index: 10;
+    justify-content: center;
+    align-items: center;
+}
+
+.sp-indicator li {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    list-style: none;
+    background-color: #fff;
+    border: 2px #000 solid;
+    cursor: pointer;
+}
+
+.sp-indicator li.active {
+    background-color: #60D4DD;
+}
+
+
+/* PickUp Section */
+.sp-pickup {
+    padding: 50px 0;
     text-align: center;
+    background: #121212;
 }
 
-.sp-product-content-odd p, .sp-product-content-even p {
-    font-size: 16px;
+.sp-pickup-description {
+    font-size: 24px;
     color: #ffffff;
-    line-height: 1.6;
+    text-align: center;
+    margin-top : -10px;
+    padding-bottom: 30px;
+}
+
+.sp-pickup-container {
+    position: relative;
+    z-index: 2; 
 }
 
 
+.sp-pickup h2 {
+    font-size: 64px;
+    color: #e6007e;
+    margin-bottom: 10px;
+    font-family: 'Abel', sans-serif;
+}
 
+.sp-pickup p {
+    font-size: 16px;
+    margin-bottom: 30px;
+}
 
+.sp-pickup-item {
+    display: block;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.sp-pickup-item img {
+    width: 100%;
+    height: auto; 
+    max-height: 383px; 
+    clip-path: polygon(0% 10%, 30% 10%, 40% 0%, 100% 0%, 100% 90%, 70% 90%, 60% 100%, 0% 100%);
+    border-radius: 10px;
+    box-shadow: 0 10px 30px 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+    overflow: auto;
+}
+
+.mirrored-image {
+    transform: scaleX(-1);
+}
+
+.sp-pickup-item:nth-child(odd) {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.sp-pickup-content-odd {
+    text-align: left; 
+    border-radius: 10px; 
+    padding: 20px;  
+}
+
+.sp-pickup-content-even {
+    text-align: left;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.sp-pickup-content-odd h3 {
+    font-size: 24px;
+    margin: 0 0 10px;
+    color: #60D4DD;
+    font-family: 'Terano', sans-serif;
+}
+
+.sp-pickup-content-odd h3 span {
+    font-size: 26px ;
+    color: transparent;
+    -webkit-text-stroke: 1px #60D4DD;
+}
+
+.sp-pickup-content-odd p:first-of-type {
+    font-size: 20px;
+    color: #fff;
+}
+
+.sp-pickup-content-odd p {
+    margin: 5px 0;
+    line-height: 29px;
+    font-size: 16px;
+}
+
+.sp-pickup-content-even h3 {
+    font-size: 24px;
+    margin: 0 0 10px;
+    color: #60D4DD;
+    font-family: 'Terano', sans-serif;
+}
+
+.sp-pickup-content-even h3 span {
+    font-size: 26px;
+    color: transparent;
+    -webkit-text-stroke: 1px #60D4DD;
+}
+
+.sp-pickup-content-even p:first-of-type {
+    font-size: 20px;
+    color: #fff;
+}
+
+.sp-pickup-content-even p {
+    margin: 5px 0;
+    line-height: 29px;
+    font-size: 16px;
+}
+
+.sp-pickup-content-odd p + p {
+    margin-top: 40px; 
+}
+
+.sp-pickup-content-even p + p {
+    margin-top: 40px; 
+}
 
 
 }

@@ -249,69 +249,91 @@
                    ARグラスを誕生させ、驚異的な視覚体験を<br>ユーザーに提供するために誕生した。</p>
             </div>
         </section>
-    
-        <!-- Product Section -->
-        <section id="sp-product" class="sp-product">
-            <div class="sp-product-container">
-                <h2>Product</h2>
-                <p class="sp-product-description">製品の魅力</p>
-                <div class="sp-product-item">
-                    <img src="img/product1.jpg" alt="Product 1">
-                    <div class="sp-product-content-odd">
-                        <h3>驚異的な解像度</h3>
-                        <p>1080pから8Kに至る高解像度を採用。<br>
-                            リアルで鮮やかな映像が、あなたの現実を拡張する。<br>
-                            最高の視覚体験を、あなたの目の前に。</p>
+
+            <!-- Product Section -->
+            <section id="sp-product" class="sp-product">
+                <div class="sp-product-container">
+                    <h2 class="title">Product</h2>
+                    <p class="sp-product-description">製品の魅力</p>
+
+                    <!-- スライドの外枠 -->
+                    <div class="sp-slide-wrapper">
+                        <!-- スライド（コンテンツ） -->
+                        <div id="sp-slide" class="sp-slide">
+                            <div class="sp-product-item">
+                                <img src="img/product1.jpg" alt="Product 1">
+                                <div class="sp-product-content-odd">
+                                    <h3>驚異的な解像度</h3>
+                                    <p>1080pから8Kに至る高解像度を採用。<br>
+                                        リアルで鮮やかな映像が、<br>あなたの現実を拡張する。<br>
+                                        最高の視覚体験を、あなたの目の前に。</p>
+                                </div>
+                            </div>
+                            <div class="sp-product-item">
+                                <img src="img/product2.png" alt="Product 2">
+                                <div class="sp-product-content-even">
+                                    <h3>視力改善の新次元</h3>
+                                    <p>内蔵されたスマート技術により、<br>
+                                        あなたの視力をリアルタイムで補正。<br>
+                                        度数調整が瞬時に行われ、<br>常に最適な視界を提供する。</p>
+                                </div>
+                            </div>
+                            <div class="sp-product-item">
+                                <img src="img/product3.jpg" alt="Product 3">
+                                <div class="sp-product-content-odd">
+                                    <h3>映画鑑賞の新境地</h3>
+                                    <p>高品質なサウンド、高解像度映像の<br>
+                                        一体感。映画の世界に没入し、<br>
+                                        いつでもどこでも楽しめる。<br>
+                                        未来の映画体験を、今すぐ体感してください。</p>
+                                </div>
+                            </div>
+                            <div class="sp-product-item">
+                                <img src="img/product4.jpg" alt="Product 4">
+                                <div class="sp-product-content-even">
+                                    <h3>食事管理の最適化</h3>
+                                    <p>目の前の料理のカロリーを瞬時に表示。<br>
+                                        あなたの目標に応じたカロリーと栄養バラ<br>ンスを提案。
+                                        ヘルシーでスタイリッシュな<br>毎日を。
+                                        食事管理は、Visionaizeにお任せ。</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <span id="sp-prev" class="sp-prev"></span>
+                        <span id="sp-next" class="sp-next"></span>
+
+                        <ul class="sp-indicator" id="sp-indicator">
+                            <li class="sp-list active"></li>
+                            <li class="sp-list"></li>
+                            <li class="sp-list"></li>
+                            <li class="sp-list"></li>
+                        </ul>
                     </div>
                 </div>
-                <div class="sp-product-item">
-                    <img src="img/product2.png" alt="Product 2">
-                    <div class="sp-product-content-even">
-                        <h3>視力改善の新次元</h3>
-                        <p>内蔵されたスマート技術により、<br>
-                            あなたの視力をリアルタイムで補正。<br>
-                            度数調整が瞬時に行われ、常に最適な視界を提供する。</p>
-                    </div>
-                </div>
-                <div class="sp-product-item">
-                    <img src="img/product3.jpg" alt="Product 3">
-                    <div class="sp-product-content-odd">
-                        <h3>映画鑑賞の新境地</h3>
-                        <p>高品質なサウンド、高解像度映像の一体感。<br>
-                            映画の世界に没入し、いつでもどこでも楽しめる。<br>
-                            未来の映画体験を、今すぐ体感してください。</p>
-                    </div>
-                </div>
-                <div class="sp-product-item">
-                    <img src="img/product4.jpg" alt="Product 4">
-                    <div class="sp-product-content-even">
-                        <h3>食事管理の最適化</h3>
-                        <p>目の前の料理のカロリーを瞬時に表示。<br>
-                            あなたの目標に応じたカロリーと栄養バランスを提案。<br>
-                            ヘルシーでスタイリッシュな毎日を。<br>
-                            未来の食事管理は、Visionaizeにお任せ。</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+            </section>
+
+
+
+
+        
     
         <!-- PickUp Section -->
-        <section id="sp-pickup" class="pickup">
-            <div id="particles-js-2"></div>
-            <div class="pickup-container">
+        <section id="sp-pickup" class="sp-pickup">
+            <div class="sp-pickup-container">
                 <h2>Pick Up</h2>
-                <p class="pickup-description">特集</p>
-                <div class="pickup-item">
+                <p class="sp-pickup-description">特集</p>
+                <div class="sp-pickup-item">
                     <img src="img/pickup1.jpg" alt="PickUp 1" class="styled-image">
-                    <div class="pickup-content-odd">
+                    <div class="sp-pickup-content-odd">
                         <h3><span>01</span><br> COMMERSE</h3>
                         <p>AR × 商業</p>
                         <p>ショッピング体験が一新。<br>特定満載の新時代へようこそ。<br>気になるアイテムを試着せず、バーチャルで確認。<br>広いショッピングモールでも迷わない。<br>行きたいお店や商品へのルートをARサングラスが案内します。<br>ARサングラスは商業と連携。<br>スマートでお得なショッピング体験をあなたに。</p>
                     </div>
                 </div>
-                <div class="pickup-item">
+                <div class="sp-pickup-item">
                     <img src="img/pickup2.jpg" alt="PickUp 2" class="styled-image mirrored-image">
-                    <div class="pickup-content-even">
+                    <div class="sp-pickup-content-even">
                         <h3><span>02</span><br> GAME</h3>
                         <p>AR × 娯楽</p>
                         <p>リアルタイムゲームイベントが開催。<br>仮想キャラクターやアイテムが街に現れ、参加者同士で競い合う。<br>周囲のリアルな風景がゲームの舞台となり、<br>あなたをゲームの世界に没入させる。<br>未知の世界が広がる、未来のゲーム体験をお楽しみください。</p>
@@ -319,66 +341,46 @@
                 </div>
             </div>
         </section>
-    
-        <section id="sp-product" class="sp-product">
-            <div id="particles-js-3"></div>
-            <h2 class="title">Product</h2>
-            <p class="sp-product-description">製品の魅力</p>
-        
+
+        <section id="sp-news" class="sp-news">
+            <h2 class="title">News</h2>
+            <p class="news-description">新着情報</p>
+
             <!-- スライドの外枠 -->
             <div class="slide-wrapper">
-                <!-- スライド（コンテンツ） -->
-                <div id="sp-slide" class="slide">
-                    <div>
-                        <img src="img/product1.jpg" alt="Product 1">
-                        <div class="sp-product-content-odd">
-                            <h3>驚異的な解像度</h3>
-                            <p>1080pから8Kに至る高解像度を採用。<br>
-                                リアルで鮮やかな映像が、あなたの現実を拡張する。<br>
-                                最高の視覚体験を、あなたの目の前に。</p>
-                        </div>
-                    </div>
-                    <div>
-                        <img src="img/product2.png" alt="Product 2">
-                        <div class="sp-product-content-even">
-                            <h3>視力改善の新次元</h3>
-                            <p>内蔵されたスマート技術により、<br>
-                                あなたの視力をリアルタイムで補正。<br>
-                                度数調整が瞬時に行われ、常に最適な視界を提供する。</p>
-                        </div>
-                    </div>
-                    <div>
-                        <img src="img/product3.jpg" alt="Product 3">
-                        <div class="sp-product-content-odd">
-                            <h3>映画鑑賞の新境地</h3>
-                            <p>高品質なサウンド、高解像度映像の一体感。<br>
-                                映画の世界に没入し、いつでもどこでも楽しめる。<br>
-                                未来の映画体験を、今すぐ体感してください。</p>
-                        </div>
-                    </div>
-                    <div>
-                        <img src="img/product4.jpg" alt="Product 4">
-                        <div class="sp-product-content-even">
-                            <h3>食事管理の最適化</h3>
-                            <p>目の前の料理のカロリーを瞬時に表示。<br>
-                                あなたの目標に応じたカロリーと栄養バランスを提案。<br>
-                                ヘルシーでスタイリッシュな毎日を。<br>
-                                未来の食事管理は、Visionaizeにお任せ。</p>
-                        </div>
-                    </div>
+            <!-- スライド（コンテンツ） -->
+                <div id="slide" class="slide">
+                <div>
+                    <img src ="img/news1.jpg" alt ="News1">
+                    <p>医療業界に革命をもたらす新しい手術室が誕生。<br>先進的なロボットアシスタントやARシステムが導入されており、<br>外科医の技術を飛躍的に向上させることが可能となった。</p>
+                    <p>2050. 4.15</p>
                 </div>
-        
-                <span id="sp-prev" class="prev"></span>
-                <span id="sp-next" class="next"></span>
-        
-                <ul class="indicator" id="sp-indicator">
-                    <li class="list"></li>
-                    <li class="list"></li>
-                    <li class="list"></li>
-                    <li class="list"></li>
-                </ul>
+                <div>
+                    <img src ="img/news2.jpg" alt ="News2">
+                    <p>未来を先取りした視覚体験がここに！！<br>Visionaize主催のARサングラス展示会をお見逃しなく。<br>
+                        最新テクノロジーとデザインの魅力に触れられます。</p>
+                    <p>2050. 6.15</p>
+                </div>
+                <div>
+                    <img src ="img/news3.jpg" alt ="News3">
+                    <p>この未来都市では、音楽の楽しみ方も大きく進化しています。<br>最新のデジタルミュージックデバイスはAR技術と融合し、<br>ユーザーに一体感と没入感を提供している！！
+                    </p>
+                    <p>2050. 8.15</p>
+                </div>
+                </div>
+
+            <span id="prev" class="prev"></span>
+            <span id="next" class="next"></span>
+
+            <ul class="indicator" id="indicator">
+            <li class="list"></li>
+            <li class="list"></li>
+            <li class="list"></li>
+            </ul>
             </div>
+
         </section>
+    
         
     
         <!-- Footer Section -->
