@@ -1053,10 +1053,11 @@ section {
 
 .sp-product-item {
     padding-bottom: 200px;
+    position: relative;
 }
 
 .sp-product-item img {
-    width: 500px;
+    width: 400px;
     height: 278px;
     clip-path: polygon(0 0, 75% 0, 100% 100%, 25% 100%);
 }
@@ -1071,10 +1072,12 @@ section {
 }
 
 .sp-product-content-odd h3, .sp-product-content-even h3 {
+    position: absolute;
     font-family: 'KIYOSUNASANS', sans-serif;
     font-size: 18px;
     color: #60D4DD;
     text-align: left;
+    top: 40%;
 }
 
 /* スライドの外枠 */
@@ -1100,12 +1103,16 @@ section {
 }
 
 .sp-slide img {
-    width: 400px;
+    position: absolute;
+    left: -10%;
+    width: 482px;
     height: 278px;
     clip-path: polygon(0 0, 75% 0, 100% 100%, 25% 100%);
 }
 
 .sp-slide p {
+    position: absolute;
+    top : 47%;
     font-family: 'KIYOSUNASANS', sans-serif;
     font-size: 17px;
     color: #fff;
@@ -1186,9 +1193,9 @@ section {
 
 /* PickUp Section */
 .sp-pickup {
-    padding: 50px 0;
     text-align: center;
     background: #121212;
+    padding: 0;
 }
 
 .sp-pickup-description {
@@ -1221,17 +1228,24 @@ section {
     display: block;
     align-items: center;
     margin-bottom: 40px;
+    overflow: hidden;
+    position: relative;
 }
 
 .sp-pickup-item img {
-    width: 100%;
+    width: 470px;
     height: auto; 
-    max-height: 383px; 
+    max-height: 350px; 
     clip-path: polygon(0% 10%, 30% 10%, 40% 0%, 100% 0%, 100% 90%, 70% 90%, 60% 100%, 0% 100%);
-    border-radius: 10px;
     box-shadow: 0 10px 30px 10px rgba(0, 0, 0, 0.5);
     transition: transform 0.3s ease;
-    overflow: auto;
+    position: absolute;
+    top: 0;
+    left: -50px;
+    right: 0;
+    bottom: 0;
+    object-fit: cover;
+    object-position: center;
 }
 
 .mirrored-image {
@@ -1246,13 +1260,17 @@ section {
 .sp-pickup-content-odd {
     text-align: left; 
     border-radius: 10px; 
-    padding: 20px;  
+    padding: 40px;  
+    margin-top: 350px;
+    padding-bottom: 100px;
 }
 
 .sp-pickup-content-even {
     text-align: left;
     border-radius: 10px;
-    padding: 20px;
+    padding: 40px;
+    margin-top: 350px;
+    padding-bottom: 100px;
 }
 
 .sp-pickup-content-odd h3 {
