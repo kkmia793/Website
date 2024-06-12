@@ -771,6 +771,8 @@ section {
     }
 
     body{
+        margin: 0;
+        padding: 0;
         overflow-x: hidden;
     }
 
@@ -874,64 +876,71 @@ section {
         transform: translateX(0);
       }
 
-/* FirstView Section */
-.first-view {
-    background: url('img/sp-FirstView.jpg') no-repeat center center;
+    /* FirstView Container */
+.sp-first-view{
+    height: 844px;
+    position: relative; 
+    background-image: url(img/sp-FirstView.jpg);
+    background-position: center;
     background-size: cover;
-    height: 100vh;
-    position: relative;
-    margin-top: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden; 
 }
-
-/* FirstView Container */
-.first-view-container {
-    position: absolute;
-    bottom: 40px; 
+.sp-first-view-container {
+    position: relative;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
-    width: 100%; /* 追加: 幅を100%に設定 */
-    height: auto;
+    align-items: center; /* 横方向の中央揃え */
+    width: 100vw; /* ビューポート幅を使用して全幅に */
 }
 
 /* FirstView Heading */
-.first-view h1 {
+.sp-first-view h1 {
+    position: absolute;
     font-family: 'Terano';
-    font-size: 44px;
+    font-size: 38px;
     color: #fff;
     text-shadow: none;
-    text-align: center; 
+    text-align: center;
     z-index: 2;
-    margin-bottom: 280px;
-    width: 100%; /* 追加: 幅を100%に設定 */
+    top:100px;
+    left:-10px;
+    margin: 0 auto; /* デフォルトのマージンをリセット */
 }
 
 /* Overlay Text */
-.overlay-text {
+.sp-overlay-text {
+    position: absolute;
     font-family: 'KIYOSUNASANS-L', sans-serif;
     font-size: 40px;
     color: #ffffff;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    text-align: center; 
-    width: 100%; /* 追加: 幅を100%に設定 */
-    margin-bottom: 200px;
+    text-align: center;
+    top:500px;
+    margin:0 auto;
 }
 
+/* h1とoverlay-textの間のマージンを調整 */
+.sp-first-view h1 + .sp-overlay-text {
+    margin-top: 20px; /* h1とoverlay-textの間のスペース */
+}
+
+
 /* Scroll Indicator */
-.scroll-indicator {
+.scroll{
+    position: relative;
+    padding-bottom: 200px;
+}
+
+.sp-scroll-indicator {
     position: absolute;
-    top:850px;
+    top : -100px;
+    left:165px;
     display: flex;
     align-items: center;
     color: #fff;
 }
 
-.scroll-text {
+.sp-scroll-text {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -941,19 +950,19 @@ section {
     color: #fff;
 }
 
-.scroll-text span {
+.sp-scroll-text span {
     display: block;
     margin: 2px 0;
 }
 
-.scroll-line {
+.sp-scroll-line {
     position: relative;
     width: 2px;
     height: 200px;
     background-color: #fff;
 }
 
-.scroll-dot {
+.sp-scroll-dot {
     position: absolute;
     top: 0;
     left: 50%;
@@ -973,6 +982,154 @@ section {
         top: calc(100% - 15px);
     }
 }
+
+/* BrandStory Content */
+.sp-brand-story-content {
+    position: relative; 
+    padding-left: 50px; 
+    padding-top: 50px; 
+    padding-bottom: 200px;;
+}
+
+.sp-brand-story-content h2 {
+    font-size: 22px;
+    color: #fff;
+    font-family: 'Terano', sans-serif;
+    position: absolute;
+    top:-50px;
+    left : 30px;
+    text-shadow: 5px 5px 0px rgba(47, 46, 46, 0.5);
+    margin: 0; 
+}
+
+.sp-brand-story-content p {
+    position: absolute;
+    font-size: 17px;
+    left : 12px;
+    color: #fff;
+    font-family: 'KIYOSUNASANS-L', sans-serif;
+    position: absolute;
+    margin: 0; 
+    text-align: left;
+}
+
+/* Product Section */
+.sp-product {
+    padding: 50px 0;
+    background: #121212;
+    position: relative;
+    overflow: hidden;
+}
+
+
+
+
+.sp-product-container {
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2; 
+}
+
+.sp-product h2 {
+    padding-top: 50px;
+    margin-top: 50px;
+    margin-bottom: 40px;
+    font-size: 64px;
+    color: #e6007e;
+    font-family: 'Abel', sans-serif;
+    text-align: left;
+}
+
+.sp-product-description {
+    font-size: 16px;
+    color: #ffffff;
+    text-align: left;
+    left: 3px;
+    margin-top : -30px;
+    padding-bottom: 30px;
+}
+
+.sp-product-item p {
+    font-size: 16px;
+    color: #ffffff;
+    text-align: center;
+}
+
+.sp-product-item {
+    display: block;
+    align-items: flex-start;
+    margin-bottom: 150px;
+    position: relative;
+}
+
+.sp-product-item img {
+    width: 481px;
+    height: 280px;
+    object-fit: cover;
+    margin-right: 50px;
+    transition: transform 0.3s ease;
+}
+
+.sp-product-item:nth-child(odd) {
+    flex-direction: row;
+}
+
+.sp-product-item:nth-child(odd) img {
+    clip-path: polygon(0 0, 75% 0, 100% 100%, 25% 100%);
+    margin-right: 20px;
+    margin-left: 0;
+}
+
+
+.sp-product-item:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.sp-product-item:nth-child(even) img {
+    clip-path: polygon(25% 0, 100% 0, 75% 100%, 0 100%);
+    margin-right: 0;
+    margin-left: 20px;
+
+}
+
+
+
+.sp-product-content-odd {
+    position: absolute;
+    top: 50%;
+    width: 40%;
+    left: 60%;
+    transform: translateY(-50%);
+    padding: 20px;
+    color: #ffffff;
+}
+
+.sp-product-content-even {
+    position: absolute;
+    top: 50%;
+    width: 40%;
+    right:60%;
+    transform: translateY(-50%);
+    padding: 20px;
+    color: #ffffff;
+}
+
+.sp-product-content-odd h3, .sp-product-content-even h3 {
+    font-size: 16px;
+    color: #00e6e6;
+    font-family: 'Abel', sans-serif;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.sp-product-content-odd p, .sp-product-content-even p {
+    font-size: 16px;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+
 
 
 
