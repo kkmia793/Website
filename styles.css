@@ -1339,6 +1339,7 @@ section {
     position: relative;
     text-align: center;
     z-index: 2;
+    margin: 0 auto;;
 }
 
 .sp-news .title{

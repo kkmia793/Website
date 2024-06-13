@@ -180,7 +180,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const slideItems = document.querySelectorAll('.sp-news-item');
 
     function updateSlide(index) {
-        slide.style.transform = `translateX(-${index * 25}%)`;
+        slide.style.transform = `translateX(-${index * 33}%)`;
         indicators.forEach((indicator, i) => {
             indicator.classList.toggle('active', i === index);
         });
