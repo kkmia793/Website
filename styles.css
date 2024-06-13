@@ -1330,20 +1330,27 @@ section {
 }
 
 .sp-news {
+    text-align: center;
     background: #121212;
+    padding: 0;
 }
 
 .sp-news-container {
+    position: relative;
     text-align: center;
     z-index: 2;
+}
+
+.sp-news .title{
+    padding-top: 100px;
 }
 
 .sp-news-description {
     font-size: 16px;
     color: #ffffff;
     text-align: center;
-    margin-top: -100px;
-    padding-bottom: 20px;
+    margin-top: -40px;
+    padding-bottom: 100px;
 }
 
 .sp-news h2 {
@@ -1357,6 +1364,67 @@ section {
     font-size: 16px;
     color: #fff;
 }
+
+.sp-news-item{
+    position: relative;
+    padding-bottom: 200px;
+}
+
+/* スライドの外枠 */
+.sp-slide-wrapper-2 {
+    width: 100%;
+    height: 600px;
+    position: relative;
+    padding-bottom: 100px;
+}
+
+.sp-slide-2 {
+    width: 350%; /* 4つのスライドなので、幅を4倍に設定 */
+    height: 100%;
+    display: flex;
+    transition: all 0.3s;
+}
+
+.sp-slide-2 div {
+    width: 100%; 
+    height: 100%;
+    font-size: 16px;
+    position: relative;
+}
+
+.sp-slide-2 img {
+    position: absolute;
+    top:-75px;
+    left: -10%;
+    width: 482px;
+    height: 278px;
+    clip-path: polygon(0 0, 75% 0, 100% 100%, 25% 100%);
+}
+
+.sp-slide-2 p {
+    font-family: 'KIYOSUNASANS', sans-serif;
+    font-size: 14px;
+    color: #fff;
+    text-align: center;
+    position: absolute;
+    left: 2px;
+    top:250px;
+    margin: 0;
+    padding: 20px;
+}
+
+.sp-slide-2 .date{
+    position: absolute;
+    text-align: center;
+    top:350px;
+    padding-left: 145px;
+    font-size: 16px;
+    color: #fff;
+    margin: 0;
+    font-family: 'KIYOSUNASANS', sans-serif;
+}
+
+
 
 /* Footer Section */
 .footer {
@@ -1401,6 +1469,63 @@ section {
     width: 50px;
     height: 50px;
 }
+
+/* 左右のボタン */
+.sp-next-2 {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    right: 40px;
+    bottom: 38%;
+    z-index: 10;
+    cursor: pointer;
+    border-top: solid 3px #fff;
+    border-right: solid 3px #fff;
+    transform: rotate(45deg) translateY(50%);
+}
+
+.sp-prev-2 {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    left: 60px;
+    bottom: 38%;
+    z-index: 10;
+    cursor: pointer;
+    border-top: solid 3px #fff;
+    border-right: solid 3px #fff;
+    transform: rotate(-135deg) translateY(-50%);
+}
+
+/* インジケーター */
+.sp-indicator-2 {
+    width: 100%;
+    position: absolute;
+    bottom: 250px;
+    left: 45%;
+    transform: translateX(-50%);
+    display: flex;
+    column-gap: 18px;
+    z-index: 10;
+    justify-content: center;
+    align-items: center;
+}
+
+.sp-indicator-2 li {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    list-style: none;
+    background-color: #fff;
+    border: 2px #000 solid;
+    cursor: pointer;
+}
+
+.sp-indicator-2 li.active {
+    background-color: #60D4DD;
+}
+
+
 
 
 }

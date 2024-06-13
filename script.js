@@ -171,6 +171,63 @@ document.addEventListener('DOMContentLoaded', function() {
     updateSlide(currentIndex);
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+    const slide = document.getElementById('sp-slide-2');
+    const prev = document.getElementById('sp-prev-2');
+    const next = document.getElementById('sp-next-2');
+    const indicators = document.querySelectorAll('#sp-indicator-2 .list');
+    let currentIndex = 0;
+    const slideItems = document.querySelectorAll('.sp-news-item');
+
+    function updateSlide(index) {
+        slide.style.transform = `translateX(-${index * 25}%)`;
+        indicators.forEach((indicator, i) => {
+            indicator.classList.toggle('active', i === index);
+        });
+    }
+
+    prev.addEventListener('click', function() {
+        currentIndex = (currentIndex > 0) ? currentIndex - 1 : slideItems.length - 1;
+        updateSlide(currentIndex);
+    });
+
+    next.addEventListener('click', function() {
+        currentIndex = (currentIndex < slideItems.length - 1) ? currentIndex + 1 : 0;
+        updateSlide(currentIndex);
+    });
+
+    indicators.forEach((indicator, i) => {
+        indicator.addEventListener('click', function() {
+            currentIndex = i;
+            updateSlide(currentIndex);
+        });
+    });
+
+    // スワイプイベントを追加
+    let startX;
+    slide.addEventListener('touchstart', function(event) {
+        startX = event.touches[0].pageX;
+    });
+
+    slide.addEventListener('touchmove', function(event) {
+        if (!startX) return;
+        let moveX = event.touches[0].pageX;
+        let diffX = startX - moveX;
+
+        if (diffX > 50) {
+            currentIndex = (currentIndex < slideItems.length - 1) ? currentIndex + 1 : 0;
+            updateSlide(currentIndex);
+            startX = null;
+        } else if (diffX < -50) {
+            currentIndex = (currentIndex > 0) ? currentIndex - 1 : slideItems.length - 1;
+            updateSlide(currentIndex);
+            startX = null;
+        }
+    });
+
+    updateSlide(currentIndex);
+});
+
 
 
 document.querySelector('.hamburger').addEventListener('click', function() {
