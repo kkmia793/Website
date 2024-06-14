@@ -848,7 +848,7 @@ section {
         list-style-type: none;
         padding: 0;
         margin:0;
-        z-index: 10;
+        z-index: 12;
       }
       .slide-menu a{
         display: block;
@@ -1482,7 +1482,6 @@ section {
     height: 30px;
     right: 40px;
     bottom: 25%;
-    z-index: 10;
     cursor: pointer;
     border-top: solid 3px #fff;
     border-right: solid 3px #fff;
@@ -1495,7 +1494,6 @@ section {
     height: 30px;
     left: 60px;
     bottom: 25%;
-    z-index: 10;
     cursor: pointer;
     border-top: solid 3px #fff;
     border-right: solid 3px #fff;
@@ -1511,7 +1509,6 @@ section {
     transform: translateX(-50%);
     display: flex;
     column-gap: 18px;
-    z-index: 8;
     justify-content: center;
     align-items: center;
 }
