@@ -118,7 +118,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const slide = document.getElementById('sp-slide');
     const prev = document.getElementById('sp-prev');
     const next = document.getElementById('sp-next');
-    const indicators = document.querySelectorAll('#sp-indicator .list');
+    const indicators = document.querySelectorAll('#sp-indicator .sp-list');
     let currentIndex = 0;
     const slideItems = document.querySelectorAll('.sp-product-item');
 
@@ -175,7 +175,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const slide = document.getElementById('sp-slide-2');
     const prev = document.getElementById('sp-prev-2');
     const next = document.getElementById('sp-next-2');
-    const indicators = document.querySelectorAll('#sp-indicator-2 .list');
+    const indicators = document.querySelectorAll('#sp-indicator-2 .sp-list');
     let currentIndex = 0;
     const slideItems = document.querySelectorAll('.sp-news-item');
 
