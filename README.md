@@ -1,3 +1,4 @@
 ## 架空ブランドサイト
+レスポンシブ対応済（iphone11 , Macbookpro)
 
-kkmia793.com
+https://kkmia793.com/
